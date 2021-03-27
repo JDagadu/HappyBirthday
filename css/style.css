@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    width:100%;
+    min-height: 100vh;
+    background-color: black;
+    text-align: center;
+    /* padding: 1px; */
+}
+.banner{
+    display: flex;
+
+}
+h1{
+    font-family: 'Parisienne', cursive;
+    color:white;
+    margin-top: 100px;
+    font-weight: 900;
+    font-size: 50px;
+}
+main{
+    /* background-color: black; */
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    padding: 0px;
+}
+.sides{
+    
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* border: 1px solid red; */
+}
+
+.baloonscontainer{
+    height: auto;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+
+.flank{
+    align-self: center ;
+    /* justify-self: auto; */
+    margin-top: -50px;
+}
+.banner1{
+    justify-content: flex-start;
+    margin-top: -100px;
+}
+.changesizeshrink1{
+    transform: scale(0.4);
+    transition: transform 1.7s; 
+}
+
+.changesizeshrink2{
+    transform: scale(0.6);
+    transition: transform 1.5s; 
+}
+.changesizeshrink3{
+    transform: scale(0.8);
+    transition: transform 1.2s; 
+}
+.changesizeshrink4{
+    transform: scale(0.7);
+    transition: transform 1s; 
+}
+
+.changesizegrow1{
+    transform: scale(1.3);
+    transition: transform 1.5s;
+}
+.changesizegrow2{
+    transform: scale(2);
+    transition: transform 1s;
+}
+.changesizegrow3{
+    transform: scale(1.6);
+    transition: transform 1.8s;
+}
+.changesizegrow4{
+    transform: scale(1.8);
+    transition: transform 0.5s;
+}
+/* .changesizebutton{
+    margin: 30px;
+} */
+.mainbox{
+    width:800px;
+    margin-top: 50px;
+    height:auto;
+    border: 1px solid black;
+    margin-left: 10px;
+    /* display: grid; */
+
+}
+#slider{
+    width:100%; height:480px; display:none;
+}
+.main-sub{
+    width: 1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boxes{
+    /* border: 1px solid black; */
+    /* height: 100px;
+    width: 100px; */
+    /* transition: transfrom 1s; */
+}
+.grid-item {
+    float: left;
+    width: 80px;
+    height: 60px;
+    border: 2px solid hsla(0, 0%, 0%, 0.5);
+  }
+  
+  .grid-item--width2 { width: 140px; }
+  /* .grid-item--height2 { height: 140px; } */
+@media (max-width:450px){
+
+    body{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    main{
+        width:400px;
+        height: 400px;
+        display: none; 
+    
+    }
+}
