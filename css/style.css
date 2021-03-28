@@ -17,10 +17,11 @@ body{
 }
 h1{
     font-family: 'Parisienne', cursive;
-    color:white;
+    color:rgb(255, 74, 101);
     margin-top: 100px;
     font-weight: 900;
     font-size: 50px;
+
 }
 main{
     /* background-color: black; */
@@ -112,12 +113,28 @@ main{
     flex-direction: column;
 
 }
+@keyframes leaves {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+}
+
+.balloons, .flank,h1 {
+    animation: leaves 2s ease-in-out infinite alternate;
+    -webkit-animation: leaves 2s ease-in-out infinite alternate;
+}
 
 .boxes{
     /* border: 1px solid black; */
     /* height: 100px;
     width: 100px; */
     /* transition: transfrom 1s; */
+    object-fit: cover;
 }
 .grid-item {
     float: left;
@@ -125,6 +142,8 @@ main{
     height: 60px;
     border: 2px solid hsla(0, 0%, 0%, 0.5);
   }
+
+  
   
   .grid-item--width2 { width: 140px; }
   /* .grid-item--height2 { height: 140px; } */
