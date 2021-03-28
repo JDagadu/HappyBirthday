@@ -3,7 +3,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let changesize = document.querySelector('.changesizebutton');
 let mainbox = document.querySelector('.mainbox');
 let size = 5;
-
+let audio = document.querySelector('audio');
+let arrlinks = [];
+console.log(document.querySelector('.pa-gallery-player-widget').style);
 
 create(size);
 
@@ -23,15 +25,15 @@ create(size);
 
 // }
 
-mainbox.addEventListener('mouseover',(event)=>{
+// mainbox.addEventListener('mouseover',(event)=>{
     
-    // console.log(event.target.className.split(" "))
-    if( event.target.className.split(" ").indexOf('boxes') > -1){
-        event.target.style.backgroundColor = `#${Math.ceil((Math.random() * 1000000))}`
-        event.target.classList.toggle('changesizegrow');
-    }
+//     // console.log(event.target.className.split(" "))
+//     if( event.target.className.split(" ").indexOf('boxes') > -1){
+//         event.target.style.backgroundColor = `#${Math.ceil((Math.random() * 1000000))}`
+//         event.target.classList.toggle('changesizegrow');
+//     }
 
-})
+// })
 
 
 function randomPickergrowth(){
@@ -64,14 +66,14 @@ function randomPickergrowth(){
 
 //    ungrowbox.classList.toggle('changesizeshrink');
    growbox1.classList.toggle('changesizegrow1');
-//    console.log(createArrayofLinks()[rand(0,45)]);
-   growbox1.setAttribute('src',createArrayofLinks()[rand(0,45)]) ;
+//    console.log(createArrayofLinks()[rand(0,37)]);
+   growbox1.setAttribute('src',createArrayofLinks()[rand(0,37)]) ;
    growbox2.classList.toggle('changesizegrow2');
-   growbox2.setAttribute('src',createArrayofLinks()[rand(0,45)]) ;
+   growbox2.setAttribute('src',createArrayofLinks()[rand(0,37)]) ;
    growbox3.classList.toggle('changesizegrow3');
-   growbox3.setAttribute('src',createArrayofLinks()[rand(0,45)]) ;
+   growbox3.setAttribute('src',createArrayofLinks()[rand(0,37)]) ;
    growbox4.classList.toggle('changesizegrow4');
-   growbox4.setAttribute('src',createArrayofLinks()[rand(0,45)]) ;
+   growbox4.setAttribute('src',createArrayofLinks()[rand(0,37)]) ;
 
 }
 
@@ -147,10 +149,10 @@ function createArrayofLinks(){
     let listfinal = Array.from(list).map((element)=>
         element.getAttribute('data')
     );
-    // console.log(listfinal)
+    console.log(listfinal)
     return listfinal;
 }
-createArrayofLinks()
+arrlinks =  createArrayofLinks()
 function rand(min, max) {
     let randomNum = Math.random() * (max - min) + min;
     return Math.round(randomNum);
@@ -172,13 +174,13 @@ return color;
 function create(size){
     mainbox.innerHTML = "";
     let counterclass = 0;
-    if(!(size<1 || size>64)){
+    if(!(size<0 || size>37)){
         // mainbox.style.cssText = `grid-template-columns: repeat(${size}, auto);grid-template-rows: repeat(${size}, auto)`;
         for(let i = 1 ; i<= size; i++){
             for(let j = 1; j<=size; j++){
                 let box = document.createElement('img');
                 box.className = 'boxes';
-                box.setAttribute('src',createArrayofLinks()[rand(0,45)]) ;
+                box.setAttribute('src',createArrayofLinks()[rand(0,37)]) ;
                 box.classList.toggle('grid-item');
                 // box.style.backgroundColor = `${generateColor()}`
                 counterclass += 1;
@@ -210,6 +212,12 @@ function create(size){
 
 if(counterclass == (size*size)){
     setInterval(() => {
+        if(Number(screen.width) < 1000){
+            audio.pause()
+            }else{
+                audio.play()
+                audio.loop = true;
+            }
         randomPickergrowth();
         
     
