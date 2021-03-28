@@ -208,17 +208,17 @@ function create(size){
         }
     }
 
-// if(counterclass == (size*size)){
-//     setInterval(() => {
-//         randomPickergrowth();
+if(counterclass == (size*size)){
+    setInterval(() => {
+        randomPickergrowth();
         
     
-//     }, 1000);
+    }, 1000);
 
-//     // setInterval(()=>{
-//     //     randomPickershrink();
-//     // },1300);
-// }
+    // setInterval(()=>{
+    //     randomPickershrink();
+    // },1300);
+}
 
 }
 
