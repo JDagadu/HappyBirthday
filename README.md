@@ -1,3 +1,2 @@
-# etchasketch
-scribbling and drawing by coloring boxes
-A simple web tool for sketching by hovering your mouse pointer over boxes.
+# Happy Birthday Picture Wall
+A fun way to celebrate the birthday of a loved one
